@@ -1,9 +1,30 @@
-•	SelectMode (void) : choix du mode => bouton poussoir avec 5 modes différents (repos, avancer, avancer droit, avancer de 10m, avancer le plus vite possible)
 
-•	Forward (void, v) : avancer => rapport entre moteur 1 et moteur 2
 
-•	ForwardFront (void, x, v) : avancer droit => rapport entre moteur 1 et moteur 2 + servomoteur
+•	SelectMode (void) : choix du mode => bouton poussoir avec 4 modes différents (avancer 5 secondes, avancer droit, avancer de 10m, avancer le plus vite possible)
 
-•	Forward10 (void, x, v) : avancer droit sur 10m => prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour qu’il s’arrête au bout de 10m
+cette fonction de selection ressemblera à :
 
-•	ForwardFast (void, x, v) : avancer le plus vite possible => prendre en compte la vitesse de l’hovercraft afin de determiner la vitesse optimale pour aller le plus vite possible
+selecteur = 0
+Tant que (“le bouton “run” n’est pas appuyé) :
+	lecture du bouton poussoir
+		si “front montant” :
+			selecteur = (selecteur + 1) % 4
+			-- permet de choisir entre les 4 premiers modes
+renvoyer selecteur
+
+
+•	Forward (void) : avancer 5 secondes => donne la consigne pour faire tourner correctement le moteur 1 et le moteur 2 et faire avancer l'aéroglisseur 5 secondes.
+Le moteur 2 permettant la suspension du véhicule n'a pas besoin de tourner quand le véhicule est à l'arret (donc quand le moteur 1 est éteint).
+Durant la marche du véhicule, le moteur 2 doit avoir une vitesse minimale en permanence
+Et il doit tourner plus vite lorsque le hovercarft accélère (quand le moteur 2 est allumé), afin que l'avant ne frotte pas le sol
+
+
+•	ForwardFront (void) : avancer droit => Doit respecter les même conditions que le mode précédent avec une contrainte supplémentaire.
+Il faut agir sur le servomoteur pour empêcher de dévier de la trajectoire rectiligne.
+Pour cela, cette fonction devra lire en boucle le signal de la "centrale inertielle" pour ensuite donner la consigne au servomoteur de corriger la trajectoire
+
+
+•	Forward10 (void) : avancer droit sur 10m => prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour qu’il s’arrête au bout de 10m
+
+
+•	ForwardFast (void) : avancer le plus vite possible => prendre en compte la vitesse de l’hovercraft afin de determiner la vitesse optimale pour aller le plus vite possible
