@@ -1,0 +1,9 @@
+•	SelectMode (void) : choix du mode => bouton poussoir avec 5 modes différents (repos, avancer, avancer droit, avancer de 10m, avancer le plus vite possible)
+
+•	Forward (void, v) : avancer => rapport entre moteur 1 et moteur 2
+
+•	ForwardFront (void, x, v) : avancer droit => rapport entre moteur 1 et moteur 2 + servomoteur
+
+•	Forward10 (void, x, v) : avancer droit sur 10m => prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour qu’il s’arrête au bout de 10m
+
+•	ForwardFast (void, x, v) : avancer le plus vite possible => prendre en compte la vitesse de l’hovercraft afin de determiner la vitesse optimale pour aller le plus vite possible
