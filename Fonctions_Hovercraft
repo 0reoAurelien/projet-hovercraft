@@ -24,7 +24,9 @@ Il faut agir sur le servomoteur pour empêcher de dévier de la trajectoire rect
 Pour cela, cette fonction devra lire en boucle le signal de la "centrale inertielle" pour ensuite donner la consigne au servomoteur de corriger la trajectoire
 
 
-•	Forward10 (void) : avancer droit sur 10m => prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour qu’il s’arrête au bout de 10m
+•	Forward10 (void) : avancer droit sur 10m => En plus des contraintes précédentes,
+doit prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour connaître sa position et le faire s'arrêter après 10m
 
 
-•	ForwardFast (void) : avancer le plus vite possible => prendre en compte la vitesse de l’hovercraft afin de determiner la vitesse optimale pour aller le plus vite possible
+•	ForwardFast (void) : avancer le plus vite possible => En plus des contraintes précédentes,
+doit determiner la vitesse optimale pour parcourir les 10 mètres le plus vite possible et s'arrêter
