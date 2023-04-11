@@ -94,7 +94,7 @@ Et il doit tourner plus vite lorsque le hovercarft accélère (quand le moteur 2
 
 prototype : (void -> void)
 
-int Forward() {
+void Forward() {
 
 •	ForwardFront (void) : avancer droit => Doit respecter les même conditions que le mode précédent avec une contrainte supplémentaire.
 Il faut agir sur le servomoteur pour empêcher de dévier de la trajectoire rectiligne.
@@ -102,20 +102,20 @@ Pour cela, cette fonction devra lire en boucle le signal de la "centrale inertie
 
 prototype : (void -> void)
 
-int ForwardFront() {
+void ForwardFront() {
 
 •	Forward10 (void) : avancer droit sur 10m => En plus des contraintes précédentes,
 doit prendre en compte la vitesse (ou l’accélération) de l’hovercraft pour connaître sa position et le faire s'arrêter après 10m
 
 prototype : (void -> void)
 
-int Forward10() {
+void Forward10() {
 
 •	ForwardFast (void) : avancer le plus vite possible => En plus des contraintes précédentes,
 doit determiner la vitesse optimale pour parcourir les 10 mètres le plus vite possible et s'arrêter
 
 prototype : (void -> void)
 
-int ForwardFast() {
+void ForwardFast() {
 
 Se référer au document "fonction_hovercraft.odt" pour plus de détails. Il contient notamment des ébauches de code commenté, et clarifie l'utilisation des fonctions.
