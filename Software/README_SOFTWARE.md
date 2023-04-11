@@ -15,6 +15,22 @@ renvoyer selecteur
 
 prototype : ne prend rien (void) en entrée et retourne le selecteur (int) en sortie
 
+int SelectMode() {
+	int selecteur = 0;
+	int btn_run = 0;
+	int btn_sel_current = 0;
+	int btn_sel_previous = 0;
+	while (btn_run != 1) :
+		btn_sel_previous = btn_sel_current;
+		btn_sel_current = (*lecture du bouton selecteur*) ; //0 ou 1 en fonction de si le bouton selecteur a été poussé
+		if (btn_sel_current & ((btn_sel_prev+1)%2) ) {
+// on s’assure que le bouton est appuyé et qu’il ne l’était pas avant
+			selecteur = (selecteur + 1) % 4 ;
+		btn_run = (*lecture du bouton run*) ;
+		}
+	}
+return selecteur;   // permettra dans le main() de choisir entre les 4 premiers modes
+}
 
 
 •	Forward (void) : avancer 5 secondes => donne la consigne pour faire tourner correctement le moteur 1 et le moteur 2 et faire avancer l'aéroglisseur 5 secondes.
