@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-04-11T09:50:06.277Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.34" etag="QcytH1Lz7aeERTTt9FSu" version="21.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-11T09:54:54.740Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.34" etag="X54pOvl2-04TByn4gSer" version="21.1.5" type="github">
   <diagram name="Page-1" id="kfJKp4cbYAR8tkhXhPna">
-    <mxGraphModel dx="1663" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1489" dy="358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="I18jwqCtprp7DAmhgl5O-34" value="&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;1 led pwr 2 User leds + 2 Btn (Reset, usr)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+        <mxCell id="I18jwqCtprp7DAmhgl5O-34" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="90" y="310" width="530" height="130" as="geometry" />
         </mxCell>
         <mxCell id="I18jwqCtprp7DAmhgl5O-33" value="&lt;div&gt;+3 LED (11.1V, 3.3V, 7.4V)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -41,7 +41,7 @@
         </mxCell>
         <mxCell id="I18jwqCtprp7DAmhgl5O-13" value="3.3V" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dnf9TGZt98A_cBVJ5hq3-10" vertex="1" connectable="0">
           <mxGeometry x="0.083" relative="1" as="geometry">
-            <mxPoint x="34" as="offset" />
+            <mxPoint x="14" as="offset" />
           </mxGeometry>
         </mxCell>
         <UserObject label="&lt;div&gt;Régulateur 3.3V&lt;/div&gt;&lt;div&gt;MAX5033DUSA+&lt;br&gt;&lt;/div&gt;" link="https://github.com/0reoAurelien/projet-hovercraft/blob/main/Datasheets/MAX5033-3128963.pdf" id="JJHdNfHpe185E23BwGl6-5">
@@ -110,7 +110,7 @@
         <mxCell id="I18jwqCtprp7DAmhgl5O-6" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=3;strokeColor=#FF0000;" parent="1" source="I18jwqCtprp7DAmhgl5O-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="330" as="sourcePoint" />
-            <mxPoint x="690" y="130" as="targetPoint" />
+            <mxPoint x="560" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <UserObject label="ESC" link="https://github.com/0reoAurelien/projet-hovercraft/blob/main/Datasheets/boostv2.pdf" id="I18jwqCtprp7DAmhgl5O-8">
@@ -141,6 +141,9 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="350" y="320" as="sourcePoint" />
             <mxPoint x="170" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="164" y="320" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="I18jwqCtprp7DAmhgl5O-17" value="3.3V" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="I18jwqCtprp7DAmhgl5O-16" vertex="1" connectable="0">
@@ -158,8 +161,9 @@
             <mxPoint x="577.48" y="300" as="sourcePoint" />
             <mxPoint x="542.48" y="430" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="542" y="360" />
-              <mxPoint x="542" y="446" />
+              <mxPoint x="580" y="360" />
+              <mxPoint x="540" y="360" />
+              <mxPoint x="540" y="447" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -225,20 +229,20 @@
             <mxPoint x="559.66" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="I18jwqCtprp7DAmhgl5O-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.588;entryY=-0.059;entryDx=0;entryDy=0;strokeColor=#FF0000;strokeWidth=3;entryPerimeter=0;" parent="1" target="I18jwqCtprp7DAmhgl5O-35" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="577.48" y="300" as="sourcePoint" />
-            <mxPoint x="541" y="446" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="577" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <UserObject label="Sonde de Programmation" link="https://github.com/0reoAurelien/projet-hovercraft/blob/main/Datasheets/MPU-6000-Datasheet1.pdf" id="I18jwqCtprp7DAmhgl5O-35">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" parent="1" vertex="1">
             <mxGeometry x="550" y="370" width="60" height="60" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="RiIhSdODxhNnx8emc70y-1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF0000;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="579.85" y="300" as="sourcePoint" />
+            <mxPoint x="579.85" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RiIhSdODxhNnx8emc70y-3" value=" &lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;&quot;&gt;1 led pwr 2 User leds + 2 Btn (Reset, usr)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="370" y="320" width="240" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
