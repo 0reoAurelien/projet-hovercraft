@@ -6,7 +6,7 @@ int SelectMode() {
 	while (btn_run != 1) :
 		btn_sel_previous = btn_sel_current;
 		btn_sel_current = (*lecture du bouton selecteur*) ;
-		if (btn_sel_current & !btn_sel_prev) {
+		if (btn_sel_current & ((btn_sel_prev+1)%2) ) {
 // on s’assure que le bouton est appuyé et qu’il ne l’était pas avant
 			selecteur = (selecteur + 1) % 4 ;
 		btn_run = (*lecture du bouton run*) ;
