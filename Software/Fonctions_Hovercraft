@@ -46,3 +46,6 @@ prototype : (void -> void)
 doit determiner la vitesse optimale pour parcourir les 10 mètres le plus vite possible et s'arrêter
 
 prototype : (void -> void)
+
+
+Se référer au document "fonction_hovercraft.odt" pour plus de détails. Il contient notamment des ébauches de code commenté, et clarifie l'utilisation des fonctions. 
