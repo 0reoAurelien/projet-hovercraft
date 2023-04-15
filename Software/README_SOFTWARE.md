@@ -2,7 +2,7 @@ Les fonctions suivantes réaliseront des appels en bouclent à d'autres fonction
 soit les entrées analogiques provenant des capteurs. Il est donc normal que le prototype des fonctions externes soit souvent (void -> void).
 
 
-Le programme structure au sein d'une fonction main comme suit :
+Le programme se structure au sein d'une fonction main comme suit :
 
 
 int main(void){
@@ -22,6 +22,9 @@ int main(void){
 			case 3:
 				ForwardFast();
 				break;
+		}
+		mode = 0;
+		// digitalWrite LOW sur toutes les LEDs USR ;
 	}
 	return 0; //jamais atteint car on ne sort pas du while précédent
 }
@@ -61,6 +64,8 @@ return selecteur;   // permettra dans le main() de choisir entre les 4 premiers 
 Cette version nécessite l'utilisation de deux boutons : un bouton de selection et un bouton run.
 Cependant, nous n'avons à disposition qu'un bouton "reset" qui sert à réinitialiser le programme, et un bouton "usr" pour gérer la fonction SelectMode.
 Une alternative consiste alors à utiliser un seul bouton pour sélectionner le mode avec des appuis courts, et valider la sélection avec un appui long.
+
+
 Cette nouvelle version du programme ressemblera à :
 
 int SelectMode() {
@@ -76,6 +81,7 @@ int SelectMode() {
 				}
 			if (chrono<32000000){
 				selecteur = (selecteur + 1) % 4 ;
+				DisplayMode(selecteur);
 				}
 			else {
 				return selecteur;
@@ -85,6 +91,31 @@ int SelectMode() {
 }
 
 
+
+Cette fonction SelectMode fait aussi appel à une autre fonction DisplayMode() qui affichera la valeur du sélecteur en binaire grâce aux deux LEDs USR.
+Elle ressemblera à :
+
+
+
+
+DisplayMode(int mode) {
+	switch(mode){   //on exécute la bonne fonction selon le mode choisi
+		case 0:
+			// write LOW sur toutes les LEDs;  indique le mode 0
+			break;
+		case 1:
+			// digitalWrite LOW sur la LED USR 2 ;
+			// digitalWrite HIGH sur la LED USR 1 ;   indique le mode 1
+			break;
+		case 2:
+			// digitalWrite LOW sur la LED USR 1 ;
+			// digitalWrite HIGH sur la LED USR 2 ;   indique le mode 2
+			break;
+		case 3:
+			// digitalWrite HIGH sur toutes les LEDs USR ;   indique le mode 3
+			break;
+	}
+}
 
 •	Forward (void) : avancer 5 secondes => donne la consigne pour faire tourner correctement le moteur 1 et le moteur 2 et faire avancer l'aéroglisseur 5 secondes.
 On ne se préoccupe pas de la trajectoire dans cette fonction. On cherche surtout quelle suspension on doit fournir au véhicule pour avancer sans frottement.
