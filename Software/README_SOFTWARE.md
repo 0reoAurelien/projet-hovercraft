@@ -76,7 +76,8 @@ int SelectMode() {
 		btn_sel = (*lecture du bouton selecteur*) ; 
 		if (btn_sel) {
 			while (btn_sel) {
-			// la clock de notre processeur a une fréquence de 80Mhz
+			// la clock de notre processeur a une fréquence de 80Mhz et chaque passage dans la boucle compte 5 périodes
+			// Chaque passage dans cette boucle dure donc 5/(80*10^6Hz) donc 62.5 ns
 				chrono++; 
 				}
 			if (chrono<32000000){
