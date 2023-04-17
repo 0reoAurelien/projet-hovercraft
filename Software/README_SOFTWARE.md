@@ -68,7 +68,21 @@ Une alternative consiste alors à utiliser un seul bouton pour sélectionner le 
 
 Cette nouvelle version du programme ressemblera à :
 
+#define LEDPIN1 12
+#define LEDPIN2 9
+#define LEDPIN2 11
+
+void setup() {
+	pinMode(LEDPIN1, OUTPUT);
+	pinMode(LEDPIN2, OUTPUT);
+	pinMode(LEDPIN3, OUTPUT);
+}
+
+
 int SelectMode() {
+	digitalwrte(LEDPIN1, LOW);
+	digitalwrte(LEDPIN2, LOW);
+	digitalwrte(LEDPIN3, LOW);
 	int selecteur = 0;
 	int btn_sel = 0;
 	int chrono = 0;
@@ -102,17 +116,23 @@ Elle ressemblera à :
 DisplayMode(int mode) {
 	switch(mode){   //on exécute la bonne fonction selon le mode choisi
 		case 0:
+			digitalwrte(LEDPIN1, LOW);
+			digitalwrte(LEDPIN2, LOW);
 			// write LOW sur toutes les LEDs;  indique le mode 0
 			break;
 		case 1:
+			digitalwrte(LEDPIN1, HIGH);
 			// digitalWrite LOW sur la LED USR 2 ;
 			// digitalWrite HIGH sur la LED USR 1 ;   indique le mode 1
 			break;
 		case 2:
+			digitalwrte(LEDPIN1, LOW);
+			digitalwrte(LEDPIN2, HIGH);
 			// digitalWrite LOW sur la LED USR 1 ;
 			// digitalWrite HIGH sur la LED USR 2 ;   indique le mode 2
 			break;
 		case 3:
+			digitalwrte(LEDPIN1, HIGH);
 			// digitalWrite HIGH sur toutes les LEDs USR ;   indique le mode 3
 			break;
 	}
