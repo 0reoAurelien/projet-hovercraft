@@ -143,6 +143,7 @@ On ne se préoccupe pas de la trajectoire dans cette fonction. On cherche surtou
 Le moteur 2 permettant la suspension du véhicule n'a pas besoin de tourner quand le véhicule est à l'arret (donc quand le moteur 1 est éteint).
 Durant la marche du véhicule, le moteur 2 doit avoir une vitesse minimale en permanence pour pouvoir glisser.
 Et il doit tourner plus vite lorsque le hovercarft accélère (quand le moteur 2 est allumé), afin que l'avant ne frotte pas trop le sol.
+Temps d'attente à programmer par une boucle for, nombre d'itérations à déterminer par pratique si optimisation non indentifiable par le microprocesseur.
 
 prototype : (void -> void)
 
@@ -150,7 +151,7 @@ void Forward() {
 
 •	ForwardFront (void) : avancer droit => Doit respecter les même conditions que le mode précédent avec une contrainte supplémentaire.
 Il faut agir sur le servomoteur pour empêcher de dévier de la trajectoire rectiligne.
-Pour cela, cette fonction devra lire en boucle le signal de la "centrale inertielle" pour ensuite donner la consigne au servomoteur de corriger la trajectoire
+Pour cela, cette fonction devra lire en boucle le signal de la "centrale inertielle"(gyroscope) pour ensuite donner la consigne au servomoteur de corriger la trajectoire
 
 prototype : (void -> void)
 
