@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;programme_hovercraft/Core/Starter&apos; to &apos;Startup&apos;" description="Rename resource &apos;Starter&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Starter" name="Startup" stamp="1683616068360" updateReferences="true"/>
+</session>
