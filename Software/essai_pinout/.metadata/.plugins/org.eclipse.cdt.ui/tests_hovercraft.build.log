@@ -1,50 +1,28 @@
-15:46:42 **** Incremental Build of configuration Debug for project tests_hovercraft ****
+16:11:56 **** Incremental Build of configuration Debug for project tests_hovercraft ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/moteur.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/moteur.d" -MT"Core/Src/moteur.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/moteur.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
 In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:288,
                  from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
                  from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
                  from ../Core/Inc/stm32l4xx_hal_conf.h:258,
                  from ../Core/Inc/moteur.h:11,
                  from ../Core/Src/moteur.c:8:
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:636:1: error: unknown type name 'HAL_StatusTypeDef'
-  636 | HAL_StatusTypeDef HAL_Init(void);
-      | ^~~~~~~~~~~~~~~~~
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:637:1: error: unknown type name 'HAL_StatusTypeDef'
-  637 | HAL_StatusTypeDef HAL_DeInit(void);
+  637 | HAL_StatusTypeDef HAL_Init(void);
       | ^~~~~~~~~~~~~~~~~
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:640:1: error: unknown type name 'HAL_StatusTypeDef'
-  640 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:638:1: error: unknown type name 'HAL_StatusTypeDef'
+  638 | HAL_StatusTypeDef HAL_DeInit(void);
       | ^~~~~~~~~~~~~~~~~
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:655:1: error: unknown type name 'HAL_StatusTypeDef'
-  655 | HAL_StatusTypeDef  HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:641:1: error: unknown type name 'HAL_StatusTypeDef'
+  641 | HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
       | ^~~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32l4xx_hal_conf.h:442,
-                 from ../Core/Inc/moteur.h:11,
-                 from ../Core/Src/moteur.c:8:
-../Core/Src/moteur.c: In function 'testmoteur':
-../Core/Src/moteur.c:16:25: error: 'htim1' undeclared (first use in this function)
-   16 |  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);
-      |                         ^~~~~
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
- 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
-      |                                         ^~~~~~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:105:3: warning: implicit declaration of function 'testmoteur' [-Wimplicit-function-declaration]
-  105 |   testmoteur();/*essai via un appel de fonction*/
-      |   ^~~~~~~~~~
-../Core/Src/moteur.c:16:25: note: each undeclared identifier is reported only once for each function it appears in
-   16 |  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);
-      |                         ^~~~~
-../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
- 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
-      |                                         ^~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:656:1: error: unknown type name 'HAL_StatusTypeDef'
+  656 | HAL_StatusTypeDef  HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
+      | ^~~~~~~~~~~~~~~~~
 make: *** [Core/Src/subdir.mk:37: Core/Src/moteur.o] Error 1
 make: *** Waiting for unfinished jobs....
 "make -j4 all" terminated with exit code 2. Build might be incomplete.
 
-15:46:46 Build Failed. 7 errors, 1 warnings. (took 3s.557ms)
+16:11:58 Build Failed. 6 errors, 0 warnings. (took 1s.347ms)
 
