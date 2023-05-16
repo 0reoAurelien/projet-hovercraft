@@ -2605,7 +2605,7 @@
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp db502883-0302-4726-b4c7-dd7eba24f6bb))
   (gr_arc (start 142.6625 67.84) (mid 146.254602 69.327898) (end 147.7425 72.92)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp e1dcb9f6-354b-4ee8-9288-13126012dbe0))
-  (gr_text "Hovercraft\n" (at 105.0525 72.93) (layer "Dwgs.User") (tstamp b1b6e1e6-00d9-4b0e-b0c8-a062228316e9)
+  (gr_text "Hovercraft\n" (at 105.0525 72.93) (layer "Cmts.User") (tstamp b1b6e1e6-00d9-4b0e-b0c8-a062228316e9)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
 
