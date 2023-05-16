@@ -602,3 +602,33 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\githubproj\pr
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-15 16:50:55.132
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-05-16 10:43:05.930 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\githubproj\projet-hovercraft\Software\essai_pinout
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-16 10:43:19.656
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-16 10:43:19.681
+!MESSAGE Log4j2 initialized with config file C:\githubproj\projet-hovercraft\Software\essai_pinout\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-16 10:43:54.793
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-05-16 11:41:59.655 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-05-16 11:42:14.129
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-05-16 11:42:14.129
+!MESSAGE Log4j2 initialized with config file C:\githubproj\projet-hovercraft\Software\essai_pinout\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-05-16 11:42:33.139
+!MESSAGE Started RMI Server, listening on port 41337
