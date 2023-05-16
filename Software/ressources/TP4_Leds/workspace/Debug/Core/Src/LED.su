@@ -1,0 +1,6 @@
+../Core/Src/LED.c:11:6:LED_Configure	32	static
+../Core/Src/LED.c:40:6:LED_DisplayGreen	16	static
+../Core/Src/LED.c:49:6:LED_InitYellow	32	static
+../Core/Src/LED.c:60:6:LED_DisplayYellow	16	static
+../Core/Src/LED.c:70:6:LED_Init	8	static
+../Core/Src/LED.c:77:6:LED_Disp3LED	16	static

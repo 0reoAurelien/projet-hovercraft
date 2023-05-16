@@ -14,6 +14,16 @@ Nous avons plusieurs objectifs à remplir :
 * Avancer de 10m
 * Avancer de 10m le plus vite possible
 
+## Méthodologie
+
+Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels : 
+* Github : logiciel qui nous permet de rassembler toute nos travaux dans un seul endroit
+* Draw.io : logiciel qui nous permet de tracer des graphes
+* Redmine : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
+* Kicad : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
+* STM32CUBEIDE : logiciel qui nous permet de programmer notre microprocesseur
+
+
 ## Conclusion
 
 ## Sources
