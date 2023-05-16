@@ -21,8 +21,15 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 * Draw.io : logiciel qui nous permet de tracer des graphes
 * Redmine : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
 * Kicad : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
-* STM32CUBEIDE : logiciel qui nous permet de programmer notre microprocesseur
+* STM32CubeIDE : logiciel qui nous permet de programmer notre microprocesseur
 
+## Problèmes rencontrés
+
+Lorsque nous avons commencé la soudure de notre PCB2 nous avons repéré un petit problème, nous avions un court-circuit entre la masse et le 3V3.
+
+## Résultats
+
+## Analyse des résultats
 
 ## Conclusion
 
