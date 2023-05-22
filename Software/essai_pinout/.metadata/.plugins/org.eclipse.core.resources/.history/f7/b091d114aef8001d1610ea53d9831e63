@@ -7,7 +7,7 @@
 
 #include "moteurElev.h"
 
-void testmoteur(TIM_HandleTypeDef tim,int val)
+void testmoteur(TIM_HandleTypeDef tim,val)
 {
 	__HAL_TIM_SET_COMPARE(&tim, TIM_CHANNEL_1, val);
 	HAL_Delay(10000);

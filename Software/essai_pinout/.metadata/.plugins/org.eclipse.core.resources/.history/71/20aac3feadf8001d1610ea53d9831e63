@@ -10,6 +10,6 @@
 
 #include "main.h"
 
-void testmoteur(TIM_HandleTypeDef,int);
+void testmoteur(TIM_HandleTypeDef);
 
 #endif /* INC_MOTEURELEV_H_ */
