@@ -1,5 +1,7 @@
 #include <stm32l4xx.h>
 
+#include "hovercraft_test1.h"
+
 // Définir les broches correspondantes aux LED
 #define LED_PWR 9  //à vérifier quand même, tout ça
 #define LED_USR 11
@@ -42,28 +44,18 @@ void turnOffLED(GPIO_TypeDef* GPIOx, uint16_t pin){
 
 // Fonction pour contrôler les LED en fonction du chiffre
 void DisplayMode(int number){
-    // Éteindre toutes les LED
-    turnOffLED(GPIOA, LED_PWR);
+    // Éteind la LED
     turnOffLED(GPIOA, LED_USR);
 
 
     // Allumer les LED en fonction du chiffre
     switch (number) {
-        case 0:
+        case 0: //1 clignotement pour le mode 1
             turnOnLED(GPIOA, LED_USR);
 			waitN(10000000);
 			turnOffLED(GPIOA, LED_PWR);
             break;
-        case 1:
-            turnOnLED(GPIOA, LED_USR);
-			waitN(10000000);
-			turnOffLED(GPIOA, LED_PWR);
-			waitN(5000000);
-			turnOnLED(GPIOA, LED_USR);
-			waitN(10000000);
-			turnOffLED(GPIOA, LED_PWR);
-            break;
-        case 2:
+        case 1: //2 clignotements pour le mode 2
             turnOnLED(GPIOA, LED_USR);
 			waitN(10000000);
 			turnOffLED(GPIOA, LED_PWR);
@@ -71,12 +63,21 @@ void DisplayMode(int number){
 			turnOnLED(GPIOA, LED_USR);
 			waitN(10000000);
 			turnOffLED(GPIOA, LED_PWR);
+            break;
+        case 2: //3 clignotements pour le mode 3
+            turnOnLED(GPIOA, LED_USR);
+			waitN(10000000);
+			turnOffLED(GPIOA, LED_PWR);
+			waitN(5000000);
+			turnOnLED(GPIOA, LED_USR);
+			waitN(10000000);
+			turnOffLED(GPIOA, LED_PWR);
 			waitN(5000000);
 			turnOnLED(GPIOA, LED_USR);
 			waitN(10000000);
 			turnOffLED(GPIOA, LED_PWR);
             break;
-        case 3:
+        case 3: //4 clignotements pour le mode 4
             turnOnLED(GPIOA, LED_USR);
 			waitN(10000000);
 			turnOffLED(GPIOA, LED_PWR);
@@ -150,7 +151,7 @@ int selectMode(){
 }
 
 
-int main(void){
+void leTest(void){
 	mode = 0;
 	while(1) {
 		mode = selectMode()
@@ -183,5 +184,4 @@ int main(void){
 		mode = 0;
 		// digitalWrite LOW sur toutes les LEDs USR ;
 	}
-	return 0; //jamais atteint car on ne sort pas du while précédent
 }
