@@ -109,9 +109,9 @@ int main(void)
   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
   HAL_Delay(500);
 
-  /*test3 appel fonction dans fichier .c externe*/
-  testmoteur(htim1,300);
-  /*cette fonction utilise la fonction delay donc s'il faut manipuler
+  /*test3 appel fonction dans fichier .c externe
+   *testmoteur(htim1,300);
+   *cette fonction utilise la fonction delay donc s'il faut manipuler
    * plusieurs moteurs simultanément, les modifications doivent se faire dans
    * moteur.c*/
 
