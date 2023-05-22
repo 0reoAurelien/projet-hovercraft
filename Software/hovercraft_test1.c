@@ -8,7 +8,7 @@
 
 
 // Définir la broche correspondante au bouton
-#define BTN_SEL GPIO_PIN_X
+#define BTN_SEL GPIO_PIN_6
 
 // Initialisation des LED
 GPIO_InitTypeDef GPIO_InitStruct = {0};
