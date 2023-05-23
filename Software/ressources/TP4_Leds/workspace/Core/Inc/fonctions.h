@@ -1,0 +1,3 @@
+
+
+void waitN(int N);

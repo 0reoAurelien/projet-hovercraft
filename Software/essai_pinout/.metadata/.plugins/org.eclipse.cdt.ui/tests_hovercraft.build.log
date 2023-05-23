@@ -1,0 +1,92 @@
+15:47:03 **** Incremental Build of configuration Debug for project tests_hovercraft ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/moteur.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/moteur.d" -MT"Core/Src/moteur.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/moteur.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L412xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+../Core/Src/moteur.c: In function 'moteur':
+../Core/Src/moteur.c:10:6: warning: type of 'tim' defaults to 'int' [-Wimplicit-int]
+   10 | void moteur(tim)
+      |      ^~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:442,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/moteur.h:11,
+                 from ../Core/Src/moteur.c:8:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1546:52: error: invalid type argument of '->' (have 'int')
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1547:52: error: invalid type argument of '->' (have 'int')
+ 1547 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1548:52: error: invalid type argument of '->' (have 'int')
+ 1548 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1549:52: error: invalid type argument of '->' (have 'int')
+ 1549 |    ((__CHANNEL__) == TIM_CHANNEL_4) ? ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1550:52: error: invalid type argument of '->' (have 'int')
+ 1550 |    ((__CHANNEL__) == TIM_CHANNEL_5) ? ((__HANDLE__)->Instance->CCR5 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1551:17: error: invalid type argument of '->' (have 'int')
+ 1551 |    ((__HANDLE__)->Instance->CCR6 = (__COMPARE__)))
+      |                 ^~
+../Core/Src/moteur.c:12:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   12 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 300);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1546:52: error: invalid type argument of '->' (have 'int')
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1547:52: error: invalid type argument of '->' (have 'int')
+ 1547 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1548:52: error: invalid type argument of '->' (have 'int')
+ 1548 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1549:52: error: invalid type argument of '->' (have 'int')
+ 1549 |    ((__CHANNEL__) == TIM_CHANNEL_4) ? ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1550:52: error: invalid type argument of '->' (have 'int')
+ 1550 |    ((__CHANNEL__) == TIM_CHANNEL_5) ? ((__HANDLE__)->Instance->CCR5 = (__COMPARE__)) :\
+      |                                                    ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:1551:17: error: invalid type argument of '->' (have 'int')
+ 1551 |    ((__HANDLE__)->Instance->CCR6 = (__COMPARE__)))
+      |                 ^~
+../Core/Src/moteur.c:14:2: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   14 |  __HAL_TIM_SET_COMPARE(tim, TIM_CHANNEL_1, 0);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/moteur.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+15:47:08 Build Failed. 14 errors, 1 warnings. (took 4s.871ms)
+

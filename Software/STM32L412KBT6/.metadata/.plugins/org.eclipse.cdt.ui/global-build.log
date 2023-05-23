@@ -1,0 +1,49 @@
+11:38:39 **** Incremental Build of configuration Debug for project TP MICROP ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/LED.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H7A3xxQ -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LED.d" -MT"Core/Src/LED.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LED.o"
+../Core/Src/LED.c: In function 'LED_Init':
+../Core/Src/LED.c:18:2: warning: implicit declaration of function 'LED_GreenEnable' [-Wimplicit-function-declaration]
+   18 |  LED_GreenEnable();
+      |  ^~~~~~~~~~~~~~~
+../Core/Src/LED.c:19:8: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+   19 |  int * p;
+      |        ^
+arm-none-eabi-gcc -o "TP MICROP.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\louis\STM32CubeIDE\workspace_1.11.2\TP MICROP\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP MICROP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP MICROP.elf
+ 
+arm-none-eabi-size   TP\ MICROP.elf 
+arm-none-eabi-objdump -h -S  TP\ MICROP.elf  > "TP MICROP.list"
+   text	   data	    bss	    dec	    hex	filename
+   1212	     12	   1572	   2796	    aec	TP MICROP.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP MICROP.list
+ 
+11:38:44 **** Incremental Build of configuration Debug for project TP MICROP ****
+make -j8 all 
+arm-none-eabi-size   TP\ MICROP.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1212	     12	   1572	   2796	    aec	TP MICROP.elf
+Finished building: default.size.stdout
+ 
+11:50:17 **** Incremental Build of configuration Debug for project TP MICROP ****
+make -j8 all 
+arm-none-eabi-size   TP\ MICROP.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1212	     12	   1572	   2796	    aec	TP MICROP.elf
+Finished building: default.size.stdout
+ 
+10:13:06 **** Incremental Build of configuration Debug for project TP MICROP ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Src/LED_BMP.d" -MT"Core/Src/LED_BMP.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LED_BMP.o" "../Core/Src/LED_BMP.s"
+arm-none-eabi-gcc -o "TP MICROP.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\louis\STM32CubeIDE\workspace_1.11.2\TP MICROP\STM32H7A3ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP MICROP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP MICROP.elf
+ 
+arm-none-eabi-size   TP\ MICROP.elf 
+arm-none-eabi-objdump -h -S  TP\ MICROP.elf  > "TP MICROP.list"
+   text	   data	    bss	    dec	    hex	filename
+   1212	     12	   1572	   2796	    aec	TP MICROP.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP MICROP.list
+ 
