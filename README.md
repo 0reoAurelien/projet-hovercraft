@@ -36,6 +36,7 @@ Lorsque nous avons commencé la soudure de notre PCB2 nous avons repéré un pet
 - Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?
 
 - Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?
+
 Notre projet est un Hovecraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3d, et les batteries qui alimentent les moteurs sont rechargées via le réseau d'électricité de l'ENSEA. De plus, notre hovercraft ne consomme pas beaucoup d'électricité. Cela en fait un projet à empreinte carbone faible.
 
 ## Conclusion
