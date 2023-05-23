@@ -31,6 +31,13 @@ Lorsque nous avons commencé la soudure de notre PCB2 nous avons repéré un pet
 
 ## Analyse des résultats
 
+## Développement durable
+
+- Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?
+
+- Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?
+
+
 ## Conclusion
 
 ## Sources
