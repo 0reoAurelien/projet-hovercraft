@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "moteurElev.h"
+#include "functions.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,28 +108,31 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
 
+
+
+
+
   /*test moteur*/
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);
-  HAL_Delay(10000);
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
-  HAL_Delay(500);
+
+  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 500);
+  //HAL_Delay(10000);
+  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
+  //HAL_Delay(500);
 
   /*test3 appel fonction dans fichier .c externe*/
-  testmoteur(htim1,300);
+  //testmoteur(htim1,300);
   /*cette fonction utilise la fonction delay donc s'il faut manipuler
    * plusieurs moteurs simultanément, les modifications doivent se faire dans
    * moteur.c*/
+
+
+
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-  }
+  leTest();
   /* USER CODE END 3 */
 }
 

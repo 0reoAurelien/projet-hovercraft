@@ -70,7 +70,7 @@ int main(void){
 	MX_I2C3_Init();
 
 
-	int N = 400000;
+	//int N = 400000;
 
 	while (1)
 	{

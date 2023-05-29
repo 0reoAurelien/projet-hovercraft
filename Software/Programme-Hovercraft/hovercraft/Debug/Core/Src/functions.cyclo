@@ -1,0 +1,7 @@
+functions.c:14:6:waitN	2
+functions.c:21:6:turnOnLED	1
+functions.c:26:6:turnOffLED	1
+functions.c:31:6:displayMode	5
+functions.c:95:5:pressDetect	9
+functions.c:123:5:selectMode	2
+functions.c:141:6:leTest	6

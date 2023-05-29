@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := tests_hovercraft_fonctions
+BUILD_ARTIFACT_NAME := hovercraft
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-tests_hovercraft_fonctions.elf \
+hovercraft.elf \
 
 MAP_FILES += \
-tests_hovercraft_fonctions.map \
+hovercraft.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-tests_hovercraft_fonctions.list \
+hovercraft.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: tests_hovercraft_fonctions.elf secondary-outputs
+main-build: hovercraft.elf secondary-outputs
 
 # Tool invocations
-tests_hovercraft_fonctions.elf tests_hovercraft_fonctions.map: $(OBJS) $(USER_OBJS) C:\githubproj\projet-hovercraft\Software\essai_pinout\tests_hovercraft_fonctions\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "tests_hovercraft_fonctions.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\githubproj\projet-hovercraft\Software\essai_pinout\tests_hovercraft_fonctions\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tests_hovercraft_fonctions.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+hovercraft.elf hovercraft.map: $(OBJS) $(USER_OBJS) C:\Users\aurel\OneDrive\Documents\GitHub\projet-hovercraft\Software\Programme-Hovercraft\hovercraft\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "hovercraft.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\aurel\OneDrive\Documents\GitHub\projet-hovercraft\Software\Programme-Hovercraft\hovercraft\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hovercraft.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-tests_hovercraft_fonctions.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "tests_hovercraft_fonctions.list"
+hovercraft.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "hovercraft.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout tests_hovercraft_fonctions.elf tests_hovercraft_fonctions.list tests_hovercraft_fonctions.map
+	-$(RM) default.size.stdout hovercraft.elf hovercraft.list hovercraft.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

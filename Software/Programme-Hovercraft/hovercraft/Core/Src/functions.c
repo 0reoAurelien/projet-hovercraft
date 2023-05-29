@@ -1,10 +1,15 @@
+//Ce fichier inclut les fonctions qui structurent le programme,
+//ainsi que les fonctions d'affichage des LEDs et d'utilisation
+//des boutons.
+
+
 #include <stm32l4xx.h>
 
-#include "hovercraft_test1.h"
+#include "functions.h"
 
 // Définir les broches correspondantes aux LED
 #define LED_PWR GPIO_PIN_11
-#define LED_USR GPIO_PIN_9
+#define LED_USR GPIO_PIN_12
 
 
 // Définir la broche correspondante au bouton
