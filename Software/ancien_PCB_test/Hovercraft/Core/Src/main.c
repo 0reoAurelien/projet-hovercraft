@@ -58,37 +58,41 @@ static void MX_TIM16_Init(void);
 static void MX_I2C3_Init(void);
 
 /* User code */
-int main(void)
-{
+int main(void){
 
-  HAL_Init();
+	HAL_Init();
 
-  SystemClock_Config();
+	SystemClock_Config();
 
-  MX_GPIO_Init();
-  MX_TIM1_Init();
-  MX_TIM16_Init();
-  MX_I2C3_Init();
+	MX_GPIO_Init();
+	MX_TIM1_Init();
+	MX_TIM16_Init();
+	MX_I2C3_Init();
 
 
-  int N = 400000;
+	int N = 400000;
 
-  while (1)
-  {
+	while (1)
+	{
 
-	  //leTest();
+		leTest(); //fonction à tester mardi 30 mai
 
-	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)==GPIO_PIN_SET){ //test du bouton
-	  	  	  	turnOnLED(GPIOA, LED_USR);
-	  			waitN(N);
-	  			turnOffLED(GPIOA, LED_USR);
-	  			waitN(N);
-	  }
-	  			turnOnLED(GPIOA, LED_PWR);
-	  			waitN(N);
-	  			turnOffLED(GPIOA, LED_PWR);
-	  			waitN(N);
-  }   // le bouton fonctionne correctement avec la configuration "pull up"
+
+		/*
+		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)==GPIO_PIN_SET){ //test du bouton
+			turnOnLED(GPIOA, LED_USR);
+			waitN(N);
+			turnOffLED(GPIOA, LED_USR);
+			waitN(N);
+		}
+		turnOnLED(GPIOA, LED_PWR);
+		waitN(N);
+		turnOffLED(GPIOA, LED_PWR);
+		waitN(N);
+		*/
+		
+		// ce test est concluant : la carte fonctionne a priori correctement 
+	}   // résultat du test : le bouton fonctionne correctement avec la configuration "pull up"
 }
 
 /**
