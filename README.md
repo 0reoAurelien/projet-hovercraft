@@ -51,7 +51,11 @@ Comme dit plus haut, notre projet est un Hovercraft, constitué d'un support en 
 ## Sources
 
 (1):https://fr.wikipedia.org/wiki/Aéroglisseur
+
 (2):https://stackoverflow.com/questions/43483762/using-stm32-hal-timer-and-adjusting-the-duty-cycle-of-a-pwm-signal
+
 (3):https://moons.link/post-632/
+
 (4):http://news.eeworld.com.cn/mcu/ic467303.html
+
 (5):https://polybot-grenoble.fr/wiki/index.php?title=Guide_STM32CubeIDE&mobileaction=toggle_view_mobile
