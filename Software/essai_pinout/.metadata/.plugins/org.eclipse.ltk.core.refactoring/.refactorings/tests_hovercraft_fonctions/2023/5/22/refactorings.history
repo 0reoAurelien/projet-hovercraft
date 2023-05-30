@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;tests_hovercraft_fonctions/Core/Inc/moteurElev.h&apos; to &apos;moteurs.h&apos;" description="Rename resource &apos;moteurElev.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/moteurElev.h" name="moteurs.h" stamp="1685429697533" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;tests_hovercraft_fonctions/Core/Src/moteurElev.c&apos; to &apos;moteurs.c&apos;" description="Rename resource &apos;moteurElev.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/moteurElev.c" name="moteurs.c" stamp="1685429708294" updateReferences="true"/>
+</session>
