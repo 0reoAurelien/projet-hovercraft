@@ -11,8 +11,8 @@ La portance est assurée par un coussin d'air sous faible pression relative, ent
 Nous avons plusieurs objectifs à remplir : 
 * Avancer, décoller
 * Avancer "droit"
-* Avancer de 10m
-* Avancer de 10m le plus vite possible
+* Avancer 10m
+* Avancer 10m le plus rapidement possible
 
 ## Méthodologie
 
@@ -25,9 +25,13 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 
 ## Problèmes rencontrés
 
-Lorsque nous avons commencé la soudure de notre PCB2 nous avons repéré un petit problème, nous avions un court-circuit entre la masse et le 3V3.
+Quand nous avons codé, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
+Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et malheureusement, l'erreur a nécessité la création d'un nouveau PCB.
 
 ## Résultats
+
+Nous avons réussi à coder des Leds qui s'allument selon un pattern quand nous appuyons sur un bouton. 
+Les PCB réalisés ont été concluants après de nombreux essais.
 
 ## Analyse des résultats
 
