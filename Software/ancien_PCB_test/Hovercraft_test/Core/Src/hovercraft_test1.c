@@ -98,7 +98,6 @@ void displayMode(int number){
 int pressDetect(int sel){
 	int chrono = 0;
 	int btn_sel = 0;
-	int remind = 10000000;
 	while(1){
 		btn_sel = 1-HAL_GPIO_ReadPin(GPIOB, BTN_SEL); //car il est configuré en pull-up
 		if (btn_sel){
