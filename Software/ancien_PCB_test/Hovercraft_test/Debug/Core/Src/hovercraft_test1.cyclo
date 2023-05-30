@@ -1,0 +1,6 @@
+hovercraft_test1.c:24:6:turnOnLED	1
+hovercraft_test1.c:29:6:turnOffLED	1
+hovercraft_test1.c:34:6:displayMode	5
+hovercraft_test1.c:98:5:pressDetect	9
+hovercraft_test1.c:128:5:selectMode	2
+hovercraft_test1.c:146:6:leTest	6

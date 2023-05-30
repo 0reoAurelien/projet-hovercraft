@@ -60,8 +60,8 @@ all: main-build
 main-build: Hovercraft.elf secondary-outputs
 
 # Tool invocations
-Hovercraft.elf Hovercraft.map: $(OBJS) $(USER_OBJS) C:\Users\aurel\OneDrive\Bureau\ancien_PCB_test\Hovercraft\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Hovercraft.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\aurel\OneDrive\Bureau\ancien_PCB_test\Hovercraft\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hovercraft.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Hovercraft.elf Hovercraft.map: $(OBJS) $(USER_OBJS) C:\Users\aurel\OneDrive\Documents\GitHub\projet-hovercraft\Software\ancien_PCB_test\Hovercraft_test\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Hovercraft.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\aurel\OneDrive\Documents\GitHub\projet-hovercraft\Software\ancien_PCB_test\Hovercraft_test\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hovercraft.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

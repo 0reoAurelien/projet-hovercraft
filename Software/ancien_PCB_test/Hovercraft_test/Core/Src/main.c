@@ -75,8 +75,8 @@ int main(void){
 	while (1)
 	{
 
-		leTest(); //fonction à tester mardi 30 mai
-
+		leTest(); //testé mardi 30 mai
+		//difficulté à calibrer les appuis longs, mais le programme global semble fonctionner
 
 		/*
 		if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6)==GPIO_PIN_SET){ //test du bouton
