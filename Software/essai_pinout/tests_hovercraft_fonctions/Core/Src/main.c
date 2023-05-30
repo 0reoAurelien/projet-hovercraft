@@ -17,7 +17,6 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <moteurs.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -244,9 +243,9 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
+  htim1.Init.Prescaler = 3;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
+  htim1.Init.Period = 999;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -322,9 +321,9 @@ static void MX_TIM16_Init(void)
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 0;
+  htim16.Init.Prescaler = 3;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 65535;
+  htim16.Init.Period = 999;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -454,7 +453,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void avancer(void)
 {
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur Ã  ajuster selon les tests
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur Ã? ajuster selon les tests
 	__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 500);
 	HAL_Delay(5000);//5s
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
