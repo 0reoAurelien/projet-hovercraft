@@ -27,6 +27,7 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 
 Quand nous avons codé, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et malheureusement, l'erreur a nécessité la création d'un nouveau PCB.
+Lors de la réalisation du PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
 
 ## Résultats
 
