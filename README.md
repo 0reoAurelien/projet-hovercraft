@@ -25,7 +25,9 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 ## Problèmes rencontrés
 
 Quand nous avons codé, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
+Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
 Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et malheureusement, l'erreur a nécessité la création d'un nouveau PCB.
+Lors de la réalisation du PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
 
 ## Résultats
 
@@ -49,3 +51,7 @@ Comme dit plus haut, notre projet est un Hovercraft, constitué d'un support en 
 ## Sources
 
 (1):https://fr.wikipedia.org/wiki/Aéroglisseur
+(2):https://stackoverflow.com/questions/43483762/using-stm32-hal-timer-and-adjusting-the-duty-cycle-of-a-pwm-signal
+(3):https://moons.link/post-632/
+(4):http://news.eeworld.com.cn/mcu/ic467303.html
+(5):https://polybot-grenoble.fr/wiki/index.php?title=Guide_STM32CubeIDE&mobileaction=toggle_view_mobile
