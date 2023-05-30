@@ -2,8 +2,7 @@
 
 ## Introduction
 
-Un hovercraft (en français aéroglisseur) est un véhicule amphibie à portance aérostatique et à propulsion aérienne, qui en général possède une ou plusieurs hélices aériennes.
-La portance est assurée par un coussin d'air sous faible pression relative, entretenu par une soufflante à l'intérieur d'une enceinte dont les parois latérales, appelées jupes, sont suffisamment déformables pour suivre au plus près le relief de la surface survolée et ainsi réduire les fuites. Les aéroglisseurs se déplacent le plus souvent sur la mer, mais aussi sur toute surface terrestre ne présentant pas d'obstacles importants (1).
+Un hovercraft (en français aéroglisseur) est un véhicule amphibie à portance aérostatique et à propulsion aérienne, qui en général possède une ou plusieurs hélices aériennes. La portance est assurée par un coussin d'air sous faible pression relative, entretenu par une soufflante à l'intérieur d'une enceinte dont les parois latérales, appelées jupes, sont suffisamment déformables pour suivre au plus près le relief de la surface survolée et ainsi réduire les fuites. Les aéroglisseurs se déplacent le plus souvent sur la mer, mais aussi sur toute surface terrestre ne présentant pas d'obstacles importants (1).
 
 
 ## Analyse technique du problème posé
@@ -28,8 +27,6 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 Quand nous avons codé, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et malheureusement, l'erreur a nécessité la création d'un nouveau PCB.
 
-Lors de la réalisation du PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
-
 ## Résultats
 
 Nous avons réussi à coder des Leds qui s'allument selon un pattern quand nous appuyons sur un bouton. 
@@ -41,12 +38,11 @@ Les PCB réalisés ont été concluants après de nombreux essais.
 
 - Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?
 
-Durant notre projet, nous avons beaucoup réfléchi à la réutilisation d'éléments matériels pour la création de notre Hovercraft. En effet, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3d.
-De plus nous pouvons réutiliser les composants comme les moteur, la batterie et les ESC dans d'autres projets.
+Durant notre projet, nous avons beaucoup réfléchi à la réutilisation d'éléments matériels pour la création de notre Hovercraft. En effet, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3d
 
 - Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?
 
-Comme dit plus haut, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Les batteries qui alimentent les moteurs sont rechargées via le réseau d'électricité de l'ENSEA. De plus, notre hovercraft ne consomme pas beaucoup d'électricité et ne rejette rien dans l'atmosphère ou dans les écosystèmes. Cela en fait un projet à empreinte carbone faible. Cependant nous n'avons pas pu évaluer l'impact en amont (fabrication et transports des composants).
+Comme dit plus haut, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Les batteries qui alimentent les moteurs sont rechargées via le réseau d'électricité de l'ENSEA. De plus, notre hovercraft ne consomme pas beaucoup d'électricité et ne rejette rien dans l'atmosphère ou dans les écosystèmes. Cela en fait un projet à empreinte carbone faible.
 
 ## Conclusion
 
