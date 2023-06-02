@@ -141,7 +141,8 @@ int main(void)
 
   int mode =0;
   while (1){
-	  mode = selectMode();
+	  HAL_Delay(1000);
+	  mode = selectMode(); //sélectionne et affiche le mode souhaité
 	  switch(mode){   //on exécute la bonne fonction selon le mode choisi
 		case 0:
 			turnOnLED(GPIOA, LED_PWR);
