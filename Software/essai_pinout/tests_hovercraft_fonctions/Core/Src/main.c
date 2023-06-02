@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "moteurs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,17 +103,26 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start(&htim1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
-  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
+  //HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
+
+  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);
+
+  HAL_TIM_Base_Start(&htim16);
+  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
+  //HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
+
+  __HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 200);
 
   /*test moteur*/
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 700);
-  HAL_Delay(5000);//5000 ms = 5s
-  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
-  HAL_Delay(500);//délai pour séparer les tests
+  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 900);
+  //HAL_Delay(10000);//10000 ms = 10s
+  //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
+  //HAL_Delay(500);//délai pour séparer les tests
 
   /*test3 appel fonction dans fichier .c externe*/
-  testmoteur(htim1,300);
+  //testmoteur(htim1,300);
   /*cette fonction utilise la fonction delay donc s'il faut manipuler
    * plusieurs moteurs simultanément, les modifications doivent se faire dans
    * moteur.c*/
@@ -123,6 +133,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -149,11 +161,15 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 1;
+  RCC_OscInitStruct.PLL.PLLN = 10;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -163,12 +179,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
   }
@@ -190,7 +206,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00000E14;
+  hi2c1.Init.Timing = 0x10909CEC;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -243,12 +259,12 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 3;
+  htim1.Init.Prescaler = 80-1;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 999;
+  htim1.Init.Period = 1000-1;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -326,7 +342,7 @@ static void MX_TIM16_Init(void)
   htim16.Init.Period = 999;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
-  htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
   {
     Error_Handler();
@@ -431,10 +447,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_1_Pin|LED_2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA11 PA12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12;
+  /*Configure GPIO pins : LED_1_Pin LED_2_Pin */
+  GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -453,7 +469,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void avancer(void)
 {
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur �? ajuster selon les tests
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur ????��?��??��?��???��?��??��?��? ajuster selon les tests
 	__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 500);
 	HAL_Delay(5000);//5s
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);

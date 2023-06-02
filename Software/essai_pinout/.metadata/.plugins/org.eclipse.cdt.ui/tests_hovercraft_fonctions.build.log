@@ -1,10 +1,10 @@
-11:21:40 **** Incremental Build of configuration Debug for project tests_hovercraft_fonctions ****
+11:22:16 **** Incremental Build of configuration Debug for project tests_hovercraft_fonctions ****
 make -j4 all 
 arm-none-eabi-size   tests_hovercraft_fonctions.elf 
    text	   data	    bss	    dec	    hex	filename
-  17372	     20	   2012	  19404	   4bcc	tests_hovercraft_fonctions.elf
+  17532	     20	   2012	  19564	   4c6c	tests_hovercraft_fonctions.elf
 Finished building: default.size.stdout
  
 
-11:21:41 Build Finished. 0 errors, 0 warnings. (took 758ms)
+11:22:17 Build Finished. 0 errors, 0 warnings. (took 563ms)
 
