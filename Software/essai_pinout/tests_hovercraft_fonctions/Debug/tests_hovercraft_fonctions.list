@@ -425,14 +425,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
- 8000522:	f44f 6100 	mov.w	r1, #2048	; 0x800
+	  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
+ 8000522:	f44f 5180 	mov.w	r1, #4096	; 0x1000
  8000526:	f04f 4090 	mov.w	r0, #1207959552	; 0x48000000
  800052a:	f001 f8fd 	bl	8001728 <HAL_GPIO_TogglePin>
 	  HAL_Delay(500);
  800052e:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
  8000532:	f000 fcd1 	bl	8000ed8 <HAL_Delay>
-	  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+	  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
  8000536:	e7f4      	b.n	8000522 <main+0x52>
  8000538:	200000c4 	.word	0x200000c4
  800053c:	20000110 	.word	0x20000110
