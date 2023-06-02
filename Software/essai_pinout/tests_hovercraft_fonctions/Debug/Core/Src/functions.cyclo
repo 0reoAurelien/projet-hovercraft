@@ -1,0 +1,5 @@
+functions.c:24:6:turnOnLED	1
+functions.c:29:6:turnOffLED	1
+functions.c:34:6:displayMode	5
+functions.c:98:5:pressDetect	9
+functions.c:132:5:selectMode	2

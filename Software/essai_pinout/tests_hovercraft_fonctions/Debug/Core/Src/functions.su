@@ -1,0 +1,5 @@
+../Core/Src/functions.c:24:6:turnOnLED	16	static
+../Core/Src/functions.c:29:6:turnOffLED	16	static
+../Core/Src/functions.c:34:6:displayMode	24	static
+../Core/Src/functions.c:98:5:pressDetect	32	static
+../Core/Src/functions.c:132:5:selectMode	16	static

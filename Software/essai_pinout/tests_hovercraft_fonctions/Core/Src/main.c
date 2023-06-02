@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "functions.h"
 #include "moteurs.h"
 /* USER CODE END Includes */
 
@@ -31,7 +32,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// Broches correspondantes aux LED
+#define LED_PWR GPIO_PIN_11
+#define LED_USR GPIO_PIN_12
 
+
+// Broche correspondante au bouton
+#define BTN_SEL GPIO_PIN_6
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -109,11 +116,11 @@ int main(void)
 
   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);
 
-  HAL_TIM_Base_Start(&htim16);
-  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
+  																	//HAL_TIM_Base_Start(&htim16);
+  																	//HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
   //HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
 
-  __HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 200);
+  																	//__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 200);
 
   /*test moteur*/
   //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 900);
@@ -131,10 +138,50 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
-	  HAL_Delay(500);
+
+  int mode =0;
+  while (1){
+	  mode = selectMode();
+	  switch(mode){   //on exécute la bonne fonction selon le mode choisi
+		case 0:
+			turnOnLED(GPIOA, LED_PWR);
+			HAL_Delay(3000);
+			//Forward();
+			testmoteur(htim1,300);
+			turnOffLED(GPIOA, LED_PWR);
+			break;
+		case 1:
+			turnOnLED(GPIOA, LED_PWR);
+			HAL_Delay(3000);
+			//ForwardFront();
+			testmoteur(htim1,300);
+			turnOffLED(GPIOA, LED_PWR);
+			break;
+		case 2:
+			turnOnLED(GPIOA, LED_PWR);
+			HAL_Delay(3000);
+			//Forward10();
+
+			turnOffLED(GPIOA, LED_PWR);
+			break;
+		case 3:
+			turnOnLED(GPIOA, LED_PWR);
+			HAL_Delay(3000);
+			//ForwardFast();
+			turnOffLED(GPIOA, LED_PWR);
+			break;
+	  }
+	  mode = 0;
+
+	  // indication avec les LEDs que le déplacement est terminé
+	  for (int i=0; i<5; i++){
+		turnOnLED(GPIOA, LED_USR);
+		turnOnLED(GPIOA, LED_PWR);
+		HAL_Delay(500);
+		turnOffLED(GPIOA, LED_USR);
+		turnOffLED(GPIOA, LED_PWR);
+		HAL_Delay(500);
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
