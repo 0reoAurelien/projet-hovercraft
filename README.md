@@ -26,7 +26,7 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 
 Quand nous avons codé, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
-Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et malheureusement, l'erreur a nécessité la création d'un nouveau PCB.
+Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et nous avons corrigé le problème. Cependant nous avions oublié le connecteur qui alimentait le système en 3V3 nous avons donc dû refaire un une V2 de notre deuxième PCB.
 Lors de la réalisation du PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
 
 ## Résultats
