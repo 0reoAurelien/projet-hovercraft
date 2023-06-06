@@ -32,7 +32,7 @@ Lors de la réalisation du 2éme PCB concernant les régulateurs nous avons renc
 Durant l'étape de programmation, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
 En particulier pour programmer le driver des moteurs, qui nécessitent la génération de signal PWM. 
-
+> Tout nos schémas Kicad et nos codes sont disponibles sur notre github
 ## Résultats
 
 Les PCB réalisés ont été concluants après de nombreux essais.
@@ -44,7 +44,7 @@ Nous avons réussi à programmer le driver des LEDs qui s'allument selon un patt
 
 **Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?**
 
-Durant notre projet, nous avons beaucoup réfléchi à la réutilisation d'éléments matériels pour la création de notre Hovercraft. En effet, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3d
+Durant notre projet, nous avons beaucoup réfléchi à la réutilisation d'éléments matériels pour la création de notre Hovercraft. En effet, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3D
 
 **Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?**
 
