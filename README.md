@@ -1,8 +1,10 @@
-## RAPPORT HOVERCRAFT
+# RAPPORT HOVERCRAFT
 
 ## Introduction
 
 Un hovercraft (en français aéroglisseur) est un véhicule amphibie à portance aérostatique et à propulsion aérienne, qui en général possède une ou plusieurs hélices aériennes. La portance est assurée par un coussin d'air sous faible pression relative, entretenu par une soufflante à l'intérieur d'une enceinte dont les parois latérales, appelées jupes, sont suffisamment déformables pour suivre au plus près le relief de la surface survolée et ainsi réduire les fuites. Les aéroglisseurs se déplacent le plus souvent sur la mer, mais aussi sur toute surface terrestre ne présentant pas d'obstacles importants.
+
+Nous avons ainsi pour but d'en réaliser un avec le matériel imposé.
 
 
 ## Analyse technique du problème posé
@@ -32,12 +34,14 @@ Lors de la réalisation du 2éme PCB concernant les régulateurs nous avons renc
 Durant l'étape de programmation, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
 En particulier pour programmer le driver des moteurs, qui nécessitent la génération de signal PWM. 
-> Tout nos [schémas Kicad](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Hardware) et nos [codes](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Software) sont disponibles sur notre github
+> Note : Tout nos [schémas Kicad](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Hardware) et nos [codes](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Software) sont disponibles sur notre github
 ## Résultats
 
 Les PCB réalisés ont été concluants après de nombreux essais.
 Nous avons allumé une LED avec génération PWM sur la STM32H7A3Zi-Q utilisée en TP.
 Nous avons réussi à programmer le driver des LEDs qui s'allument selon un pattern lorsque nous appuyons sur un bouton et l'observer sur le PCB réalisé.
+
+Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaité en sortie.
 
 
 ## Développement durable
