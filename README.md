@@ -7,20 +7,21 @@ Un hovercraft (en français aéroglisseur) est un véhicule amphibie à portance
 
 ## Analyse technique du problème posé
 
-Nous avons plusieurs objectifs à remplir : 
-* Avancer, décoller
-* Avancer "droit"
-* Avancer 10m
-* Avancer 10m le plus rapidement possible
+|Objectifs à remplir|Contraintes|
+|-------------------|-----------|
+|Avancer, décoller|Pas de contrôle à distance|
+|Avancer "droit"|Pas de contrôle à distance|
+|Avancer 10m|Pas de contrôle à distance|
+|Avancer 10m le plus rapidement possible|Pas de contrôle à distance|
 
 ## Méthodologie
 
 Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels : 
-* Github : logiciel qui nous permet de rassembler toute nos travaux dans un seul endroit
-* Draw.io : logiciel qui nous permet de tracer des graphes
-* Redmine : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
-* Kicad : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
-* STM32CubeIDE : logiciel qui nous permet de programmer notre microprocesseur
+* **Github** : logiciel qui nous permet de rassembler toute nos travaux dans un seul endroit
+* **Draw.io** : logiciel qui nous permet de tracer des graphes
+* **Redmine** : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
+* **Kicad** : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
+* **STM32CubeIDE** : logiciel qui nous permet de programmer notre microprocesseur
 
 ## Problèmes rencontrés
 
@@ -41,11 +42,11 @@ Nous avons réussi à programmer le driver des LEDs qui s'allument selon un patt
 
 ## Développement durable
 
-- Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?
+**Quelle réflexion avez-vous mené au cours de ce projet autour de la réutilisation d'éléments matériels pour la création de votre projet ?**
 
 Durant notre projet, nous avons beaucoup réfléchi à la réutilisation d'éléments matériels pour la création de notre Hovercraft. En effet, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Le support est fait à base de plastique recyclable imprimé en 3d
 
-- Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?
+**Votre projet limite-t-il les quantités de pollutions ou de déchets rejetés dans les écosystèmes ?**
 
 Comme dit plus haut, notre projet est un Hovercraft, constitué d'un support en plastique ainsi que de moteurs alimentés en électricité. Les batteries qui alimentent les moteurs sont rechargées via le réseau d'électricité de l'ENSEA. De plus, notre hovercraft ne consomme pas beaucoup d'électricité et ne rejette rien dans l'atmosphère ou dans les écosystèmes. Cela en fait un projet à empreinte carbone faible.
 
