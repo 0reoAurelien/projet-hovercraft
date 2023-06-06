@@ -25,14 +25,14 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 
 ## Problèmes rencontrés
 
-Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et nous avons corrigé le problème. Cependant nous avions oublié le connecteur qui alimentait le système en 3V3 nous avons donc dû refaire un une V2 de notre deuxième PCB.
-Par mégarde nous avons arraché un connecteur ce qui a arraché une piste cuivre de notre PCB. Nous avons réparé le problème en plaçant un fil.
+Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et nous avons corrigé le problème. Cependant nous avions oublié le connecteur qui alimentait le système en 3V3 nous avons donc dû refaire une V2 de notre deuxième PCB.
+Par mégarde, nous avons arraché un connecteur ce qui a arraché une piste cuivre de notre PCB. Nous avons réparé le problème en plaçant un fil.
 Lors de la réalisation du 2éme PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
 
 Durant l'étape de programmation, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
 En particulier pour programmer le driver des moteurs, qui nécessitent la génération de signal PWM. 
-> Tout nos schémas Kicad et nos codes sont disponibles sur notre github
+> Tout nos schémas Kicad [Hardware](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Hardware) et nos codes [Software](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Software) sont disponibles sur notre github
 ## Résultats
 
 Les PCB réalisés ont été concluants après de nombreux essais.
