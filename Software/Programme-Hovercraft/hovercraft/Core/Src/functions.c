@@ -120,7 +120,6 @@ int pressDetect(int sel){
 			return 0;
 		}
 		chrono=0;
-		remind--;
 		//si les conditions ne sont pas vérifiées, aucun appui n'est détecté
 	}
 }
