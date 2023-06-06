@@ -1,0 +1,10 @@
+10:52:01 **** Incremental Build of configuration Debug for project testh7a3 ****
+make -j4 all 
+arm-none-eabi-size   testh7a3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13984	     24	   1720	  15728	   3d70	testh7a3.elf
+Finished building: default.size.stdout
+ 
+
+10:52:03 Build Finished. 0 errors, 0 warnings. (took 1s.60ms)
+
