@@ -38,7 +38,6 @@ En particulier pour programmer le driver des moteurs, qui nécessitent la géné
 Les PCB réalisés ont été concluants après de nombreux essais.
 Nous avons allumé une LED avec génération PWM sur la STM32H7A3Zi-Q utilisée en TP.
 Nous avons réussi à programmer le driver des LEDs qui s'allument selon un pattern lorsque nous appuyons sur un bouton et l'observer sur le PCB réalisé.
-
 Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaité en sortie.
 
 
