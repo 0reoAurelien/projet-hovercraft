@@ -116,11 +116,11 @@ int main(void)
 
   __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);
 
-  																	//HAL_TIM_Base_Start(&htim16);
-  																	//HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
+  //HAL_TIM_Base_Start(&htim16);
+  //HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);  //activation des générateurs PWM (timers)
   //HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
 
-  																	//__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 200);
+  //__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 200);
 
   /*test moteur*/
   //__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 900);
@@ -517,7 +517,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void avancer(void)
 {
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur ????��?��??��?��???��?��??��?��? ajuster selon les tests
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 300);//valeur à ajuster selon les tests
 	__HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, 500);
 	HAL_Delay(5000);//5s
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
@@ -528,7 +528,7 @@ void avancer(void)
 
 void avancer10m(void)
 {
-	 //int16_t x,y,z;
+	 //reception de données du MPU6050 et manipulation du servomoteur
 }
 /* USER CODE END 4 */
 
