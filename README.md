@@ -40,6 +40,7 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 * **Redmine** : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
 * **Kicad** : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
 * **STM32CubeIDE** : logiciel qui nous permet de programmer notre microprocesseur
+
 Nous avons décidé de nous séparer en 2 groupes, un qui s'occupe de la partie hardware (conception de PCB et soudure) et un autre qui s'occupe de la partie software.
 
 ## Problèmes rencontrés
