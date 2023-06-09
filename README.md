@@ -4,22 +4,22 @@
 
 Un hovercraft (en français aéroglisseur) est un véhicule amphibie à portance aérostatique et à propulsion aérienne, qui en général possède une ou plusieurs hélices aériennes. La portance est assurée par un coussin d'air sous faible pression relative, entretenu par une soufflante à l'intérieur d'une enceinte dont les parois latérales, appelées jupes, sont suffisamment déformables pour suivre au plus près le relief de la surface survolée et ainsi réduire les fuites. Les aéroglisseurs se déplacent le plus souvent sur la mer, mais aussi sur toute surface terrestre ne présentant pas d'obstacles importants.
 
-Nous avons ainsi pour but d'en réaliser un avec le matériel imposé.
+Nous avons ainsi pour but d'en réaliser un avec le matériel proposé.
 
 
 ## Analyse technique du problème posé
 
 |Objectifs à remplir|Contraintes|
 |-------------------|-----------|
-|Avancer, décoller|Pas de contrôle à distance|
-|Avancer "droit"|Pas de contrôle à distance|
-|Avancer 10m|Pas de contrôle à distance|
-|Avancer 10m le plus rapidement possible|Pas de contrôle à distance|
+|Avancer, décoller|Pas de contrôle à distance (autonome)|
+|Avancer "droit"|Pas de contrôle à distance (autonome)|
+|Avancer 10m|Pas de contrôle à distance (autonome)|
+|Avancer 10m le plus rapidement possible|Pas de contrôle à distance (autonome)|
 
 
-Nous avons utilisé les comppsants suivants :
+Nous avons utilisé les composants suivants :
 * 2 régulateurs BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
-* Un MPU6050 qui est la centrale inertielle
+* Un MPU6050 qui est une centrale inertielle
 * Un microprocesseur STM32 qui communique en I2C avec la centrale
 * 2 ESC qui contrôlent 2 moteurs
 * Une batterie qui délivre une tension de 11,1 V
