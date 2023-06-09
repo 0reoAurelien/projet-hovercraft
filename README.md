@@ -18,7 +18,7 @@ Nous avons ainsi pour but d'en réaliser un avec le matériel proposé.
 
 
 Nous avons utilisé les composants suivants :
-* 2 régulateurs BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
+* 2 régulateurs de tension BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
 * Une centrale inertielle MPU6050
 * Un microprocesseur STM32 qui communique en I2C avec la centrale inertielle
 * 2 ESC qui communique en PWM avec le microprocesseur, les ESC contrôlent 2 moteurs
@@ -26,8 +26,8 @@ Nous avons utilisé les composants suivants :
 * Une sonde de programmation
 * Un servo-moteur XL320 qui communique en UART avec le microprocesseur
 
-Nous utilsons des régulateurs car le microprocesseur accepte une tension de 3,3 V et la sonde de programmation 7,4 V alors que la batterie nous délivre du 11,1 V.
-Le microprocesseur lui sert à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
+Nous employons des régulateurs de tension afin d'adapter les niveaux de tension pour les composants utilisés. Le microprocesseur nécessite une tension de 3,3 V, tandis que la sonde de programmation requiert 7,4 V. Cependant, la batterie fournit une tension de 11,1 V.
+Le microprocesseur lui sert à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Le microprocesseur est complété par l'ajout du servo-moteur pour l'asservissement.
 On a alors ce [diagramme](https://github.com/0reoAurelien/projet-hovercraft/blob/main/Hardware/DIAGRAMME_VF.png) qui résume cela.
 
 L'I2C et l'UART sont des protocoles de communication. L'UART permet l'échange de données entre un émetteur et un récepeteur dans les 2 sens et l'I2C permet à un système maître de controler des systèmes esclaves.
