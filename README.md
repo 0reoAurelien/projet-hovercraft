@@ -20,8 +20,8 @@ Nous avons ainsi pour but d'en réaliser un avec le matériel proposé.
 Nous avons utilisé les composants suivants :
 * 2 régulateurs BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
 * Une centrale inertielle MPU6050
-* Un microprocesseur STM32 qui communique en I2C avec la centrale
-* 2 ESC qui contrôlent 2 moteurs
+* Un microprocesseur STM32 qui communique en I2C avec la centrale inertielle
+* 2 ESC qui communique en PWM avec le microprocesseur, les ESC contrôlent 2 moteurs
 * Une batterie qui délivre une tension de 11,1 V
 * Une sonde de programmation
 * Un servo-moteur XL320 qui communique en UART avec le microprocesseur
