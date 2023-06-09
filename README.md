@@ -16,6 +16,20 @@ Nous avons ainsi pour but d'en réaliser un avec le matériel imposé.
 |Avancer 10m|Pas de contrôle à distance|
 |Avancer 10m le plus rapidement possible|Pas de contrôle à distance|
 
+
+Nous avons utilisé les comppsants suivants :
+* 2 régulateurs BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
+* Un MPU6050 qui est la centrale inertielle
+* Un microprocesseur STM32 qui communique en I2C avec la centrale
+* 2 ESC qui contrôlent 2 moteurs
+* Une batterie qui délivre une tension de 11,1 V
+* Une sonde de programmation
+* Un servo-moteur XL320 qui communique en UART avec le microprocesseur
+
+Nous utilsons des régulateurs car le microprocesseur accepte une tension de 3,3 V et la sonde de programmation 7,4 V alors que la batterie nous délivre du 11,1 V.
+Le microprocesseur lui ser à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
+On a alors ce [diagramme](DIAGRAMME_VF.png) qui résume cela.
+
 ## Méthodologie
 
 Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels : 
@@ -24,6 +38,7 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 * **Redmine** : logiciel qui nous permet de nous créer un emploi du temps (diagramme de Gantt) et nous a permis de nous répartir les différentes taches
 * **Kicad** : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
 * **STM32CubeIDE** : logiciel qui nous permet de programmer notre microprocesseur
+Nous avons décidé de nous séparer en 2 groupes, un qui s'occupe de la partie hardware (conception de PCB et soudure) et un autre qui s'occupe de la partie software.
 
 ## Problèmes rencontrés
 
