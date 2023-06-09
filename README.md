@@ -30,6 +30,8 @@ Nous utilsons des régulateurs car le microprocesseur accepte une tension de 3,3
 Le microprocesseur lui ser à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
 On a alors ce [diagramme](https://github.com/0reoAurelien/projet-hovercraft/blob/main/Hardware/DIAGRAMME_VF.png) qui résume cela.
 
+L'I2C et l'UART sont des protocoles de communication. L'UART permet l'échange de données entre un émetteur et un récepeteur dans les 2 sens et l'I2C permet à un système maître de controler des systèmes esclaves.
+
 ## Méthodologie
 
 Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels : 
