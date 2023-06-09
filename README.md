@@ -19,7 +19,7 @@ Nous avons ainsi pour but d'en réaliser un avec le matériel proposé.
 
 Nous avons utilisé les composants suivants :
 * 2 régulateurs BUCK MAX5033 qui ont un fort rendement (entre 80 et 90%)
-* Un MPU6050 qui est une centrale inertielle
+* Une centrale inertielle MPU6050
 * Un microprocesseur STM32 qui communique en I2C avec la centrale
 * 2 ESC qui contrôlent 2 moteurs
 * Une batterie qui délivre une tension de 11,1 V
@@ -27,7 +27,7 @@ Nous avons utilisé les composants suivants :
 * Un servo-moteur XL320 qui communique en UART avec le microprocesseur
 
 Nous utilsons des régulateurs car le microprocesseur accepte une tension de 3,3 V et la sonde de programmation 7,4 V alors que la batterie nous délivre du 11,1 V.
-Le microprocesseur lui ser à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
+Le microprocesseur lui sert à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
 On a alors ce [diagramme](https://github.com/0reoAurelien/projet-hovercraft/blob/main/Hardware/DIAGRAMME_VF.png) qui résume cela.
 
 L'I2C et l'UART sont des protocoles de communication. L'UART permet l'échange de données entre un émetteur et un récepeteur dans les 2 sens et l'I2C permet à un système maître de controler des systèmes esclaves.
@@ -41,13 +41,13 @@ Pour mener à bien ce projet, nous avons eu à utiliser plusieurs logiciels :
 * **Kicad** : logiciel qui nous permet de faire nos schematic ainsi que nos PCB
 * **STM32CubeIDE** : logiciel qui nous permet de programmer notre microprocesseur
 
-Nous avons décidé de nous séparer en 2 groupes, un qui s'occupe de la partie hardware (conception de PCB et soudure) et un autre qui s'occupe de la partie software.
+Nous avons décidé de nous séparer en 2 groupes, un qui s'occupe de la partie hardware (conception de PCB et soudure) et l'autre qui s'occupe de la partie software.
 
 ## Problèmes rencontrés
 
-Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Nous avons analysé notre PCB afin de déterminer l'erreur et nous avons corrigé le problème. Cependant nous avions oublié le connecteur qui alimentait le système en 3V3 nous avons donc dû refaire une V2 de notre deuxième PCB.
-Par mégarde, nous avons arraché un connecteur ce qui a arraché une piste cuivre de notre PCB. Nous avons réparé le problème en plaçant un fil.
-Lors de la réalisation du 2éme PCB concernant les régulateurs nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors du soudage de certains composants.
+Lorsque nous avons commencé à souder l'un de nos PCB, il y avait un problème de court-circuit entre la masse et du 3V3. Ce problème a pu être révélé grâce à la caméra thermique. Nous avons analysé notre PCB et déterminé qu'il s'agissait d'un défaut à la fabrication de la carte. Nous avons pu corriger le problème en coupant une zone du PCB pour retirer le court-circuit. Cependant nous avions aussi oublié le connecteur qui alimentait le système en 3V3 donc nous avons donc dû refaire une V2 de notre deuxième PCB.
+Par mégarde, nous avons arraché un connecteur ce qui a arraché une piste cuivre de notre PCB. Nous avons réparé le problème en repositionnant la connecteur et en soudant un fil à la place du circuit arraché.
+Lors de la réalisation du 2ème PCB concernant les régulateurs, nous avons rencontré des problèmes lors de la conception (notamment l'optimisation de la taille et certaines empreintes) et lors de la soudure de certains composants.
 
 Durant l'étape de programmation, nous nous sommes heurtés à de nombreuses difficultés notamment sur les différents pins de sortie.
 Le codage des pins en PWM,USART et en I2C étant non traité en TP de microprocesseurs, nous avons eu du mal à écrire les commandes.
