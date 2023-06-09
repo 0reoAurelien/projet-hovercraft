@@ -36,7 +36,7 @@ Le codage des pins en PWM,USART et en I2C étant non traité en TP de microproce
 En particulier pour programmer le driver des moteurs, qui nécessitent la génération de signal PWM. Tester le code d'abord sur le PCB réalisé n'était pas une très bonne idée, car cela gênait l'identification de la cause lorsque le résultat n'est pas celui attendu. De plus, l'activation des moteurs nécessitaient un processus précis(disponible sur la page 6 de la datasheet PICHLER_XQ_ESC.pdf), dont il fallait se positionner dans le déroulement uniquement avec les beeps renvoyés par les moteurs.
 Concernant le driver du servomoteur et la centrale inertielle, par manque de temps et en considérant cela inutile sans être capable de démarrer le moteur, nous nous sommes arrêtés à l'étape de recherches (la source (4) aurait pu servir).
 
-Bien que nous avons obtenu des résultats sur l'alimentation pour la régulation de tension lorsque nous avons branché le PCB sur la batterie nous avons fait cramé certains composants.
+Bien que nous avons obtenu des résultats sur l'alimentation pour la régulation de tension lorsque nous avons branché le PCB sur la batterie nous avons fait cramé certains composants mais nous ne savons pas pourquoi.
 > Note : Tout nos [schémas Kicad](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Hardware) et nos [codes](https://github.com/0reoAurelien/projet-hovercraft/tree/main/Software) sont disponibles sur notre github
 ## Résultats
 
@@ -50,7 +50,7 @@ Nous avons ensuite testé ce signal sur le moteur(avec le régulateur XQ et une 
 
 Nous avons réussi à programmer le driver des LEDs qui s'allument selon un pattern lorsque nous appuyons sur un bouton et l'observer sur le PCB réalisé.
 
-Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaité en sortie.
+Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaité en sortie avec une alimentation branchée sur le réseau cependant lors des essais sur batteries nous avons rencontrés des problèmes comme écrit dans la partie précédente.
 
 
 ## Développement durable
