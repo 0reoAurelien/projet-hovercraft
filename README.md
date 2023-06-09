@@ -28,7 +28,7 @@ Nous avons utilisé les comppsants suivants :
 
 Nous utilsons des régulateurs car le microprocesseur accepte une tension de 3,3 V et la sonde de programmation 7,4 V alors que la batterie nous délivre du 11,1 V.
 Le microprocesseur lui ser à contrôler les ESC et donc les moteurs pour qu'on puisse accomplir les objectifs fixés. Au microprocesseur s'ajoute le servo-moteur pour l'asservissement.
-On a alors ce [diagramme](DIAGRAMME_VF.png) qui résume cela.
+On a alors ce [diagramme](https://github.com/0reoAurelien/projet-hovercraft/blob/main/Hardware/DIAGRAMME_VF.png) qui résume cela.
 
 ## Méthodologie
 
