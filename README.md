@@ -70,7 +70,9 @@ Nous avons ensuite testé ce signal sur le moteur (avec le régulateur XQ et une
 
 Nous avons réussi à programmer le driver des LEDs qui s'allument et suivent un pattern lorsque nous appuyons sur un bouton. Ce programme a pu être observé avec le PCB réalisé.
 
-Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaité en sortie avec une alimentation branchée sur le réseau. Cependant, lors des essais sur batteries, nous avons rencontrés des problèmes comme décrit dans la partie précédente.
+Concernant le PCB avec les régulateur de tension, on arrive à avoir la tension souhaitée en sortie avec une alimentation branchée sur le réseau. Cependant, lors des essais sur batteries, nous avons rencontrés des problèmes comme décrit dans la partie précédente.
+
+Plus d'informations sur la partie Software sont disponibles dans le fichier Readme_Software.
 
 
 ## Développement durable
