@@ -85,6 +85,11 @@ Comme dit précédemment, notre projet est un Hovercraft, constitué d'un suppor
 
 ## Conclusion
 
+Ce projet d'Hovercraft a été une expérience enrichissante qui nous a permis d'explorer les aspects techniques de la création d'un véhicule autonome. Nous avons pris en compte des contraintes environnementales en utilisant des matériaux recyclables pour le support en plastique et nous avons pensé à la réutilisation future de certains composants tels que les moteurs.
+
+Malgré les défis rencontrés tout au long du projet, tels que les problèmes de court-circuit sur les PCB, les difficultés de programmation des moteurs et les erreurs de conception, nous avons pu obtenir des résultats positifs. Notre microprocesseur fonctionne correctement et nous avons réussi à générer des signaux PWM, contrôler des LEDs et mettre en œuvre un système de sélection de modes. Cependant, nous n'avons pas été en mesure d'accomplir tous nos objectifs, comme l'utilisation de la centrale inertielle ou du servomoteur pour le contrôle de la trajectoire de l'hovercraft.
+
+Finalement, malgré les difficultés rencontrées, ce projet nous a permis d'acquérir de précieuses compétences techniques, de prendre conscience des enjeux environnementaux et de développer notre esprit d'innovation et de collaboration. 
 ## Sources
 
 (1):https://fr.wikipedia.org/wiki/Aéroglisseur
