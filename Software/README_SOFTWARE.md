@@ -29,6 +29,7 @@ int main(void){
 	return 0; //jamais atteint car on ne sort pas du while précédent
 }
 
+Nous avons par la suite amélioré ce code pour implémenter des fonctions d'affichage indiquant l'état de fonctionnement des moteurs.
 
 •	SelectMode (void) : choix du mode => bouton poussoir avec 4 modes différents (avancer 5 secondes, avancer droit, avancer de 10m, avancer le plus vite possible)
 
@@ -171,4 +172,6 @@ prototype : (void -> void)
 
 void ForwardFast() {
 
-Se référer au document "fonction_hovercraft.odt" pour plus de détails. Il contient notamment des ébauches de code commenté, et clarifie l'utilisation des fonctions.
+Les fonctions ici présentes dans le ReadMe sont des ébauches et peuvent comporter des erreurs de syntaxe, ou bien être encore incomplètes. Pour voir le code complet, accédez à notre dossier test-pinout qui contient le code fonctionnel implémenté dans la dernière version de notre PCB. Ce code ne fait pas appel aux fonctions de contrôle des moteurs, car ces derniers ne fonctionnent pas. 
+Pour commander les moteurs, nous avons utilisé en parallèle notre carte Nucleo, comme lors de la démonstration durant la présentation orale.
+Se référer au document "fonction_hovercraft.odt" pour plus de détails, sur le code. Ce document contient notamment des ébauches de code commenté, et clarifie l'utilisation des fonctions.
